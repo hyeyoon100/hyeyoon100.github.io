@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+{% include base_path %}
+{% assign author = site.author %}
+
+<div id="main" role="main">
+  <article class="home" itemscope itemtype="http://schema.org/Person">
+
+    <section class="home__hero">
+      <div class="home__profile">
+        {% if author.avatar contains "://" %}
+          <img class="home__avatar" src="{{ author.avatar }}" alt="{{ author.name }}" fetchpriority="high" />
+        {% else %}
+          <img class="home__avatar" src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" alt="{{ author.name }}" fetchpriority="high" />
+        {% endif %}
+
+        <ul class="home__links">
+          {% if author.email %}
+            <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i>Email</a></li>
+          {% endif %}
+          {% if author.cv %}
+            <li><a href="{% if author.cv contains '://' %}{{ author.cv }}{% else %}{{ base_path }}{{ author.cv }}{% endif %}"><i class="fas fa-fw fa-file-lines" aria-hidden="true"></i>CV</a></li>
+          {% endif %}
+          {% if author.lab %}
+            <li><a href="{{ author.lab }}"><i class="fas fa-fw fa-flask" aria-hidden="true"></i>GLI Lab</a></li>
+          {% endif %}
+          {% if author.googlescholar %}
+            <li><a href="{{ author.googlescholar }}"><i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i>Google Scholar</a></li>
+          {% endif %}
+          {% if author.linkedin %}
+            <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
+          {% endif %}
+          {% if author.github %}
+            <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i>GitHub</a></li>
+          {% endif %}
+          {% if author.orcid %}
+            <li><a href="{{ author.orcid }}"><i class="ai ai-orcid ai-fw" aria-hidden="true"></i>ORCID</a></li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="home__intro">
+        <h1 class="home__name" itemprop="name">{{ author.name }}</h1>
+        {% if page.bio %}
+          <p class="home__bio">{{ page.bio | join: "<br>" }}</p>
+        {% endif %}
+
+        {% if page.research_interests %}
+          <h2 class="home__heading">Research Interests</h2>
+          <ul class="home__interests">
+            {% for interest in page.research_interests %}
+              <li>{{ interest }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </section>
+
+    <hr class="home__divider">
+
+    <section class="page__content" itemprop="description">
+      {{ content }}
+    </section>
+
+    <p class="home__updated">Last Updated {{ site.time | date: "%Y-%m-%d" }}</p>
+
+  </article>
+</div>

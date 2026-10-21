@@ -1,30 +1,27 @@
 # The following is the order of the links in the header of the website.
 #
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
-#
-# NOTE that only one of the CV options should be selected, the first is for the
-#      Markdown formatted page while the second is generated using JSON.
+# Each link jumps to a section on the home page (_pages/about.md).
+# The anchor is the section heading in lowercase with spaces replaced by "-",
+# e.g. "## Research Projects" -> /#research-projects
 
 main:
+  - title: "About"
+    url: /#about-me
+
+  - title: "News"
+    url: /#news
+
+  - title: "Education"
+    url: /#education
+
+  - title: "Experience"
+    url: /#experience
+
   - title: "Publications"
-    url: /publications/
+    url: /#publications
 
-  - title: "Talks"
-    url: /talks/    
+  - title: "Patents"
+    url: /#patents
 
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
-  - title: "CV"
-    url: /cv/
-    
-  - title: "Guide"
-    url: /markdown/
+  - title: "Projects"
+    url: /#research-projects
