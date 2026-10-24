@@ -1,0 +1,26 @@
+# News timeline on the home page (rendered by _includes/news.html).
+#
+# - List items newest first; items are grouped under their year automatically.
+# - month: short English month name (Jan, Feb, ... Dec)
+# - text: Markdown is allowed, e.g. **bold**, [link](https://...)
+#
+# Example:
+# - year: 2026
+#   month: Aug
+#   text: "Our paper **XXX** is accepted to **EMNLP 2026 Findings**."
+
+- year: 2026
+  month: Sep
+  text: "Filed a Korean patent on **document-level relation extraction with language models**."
+
+- year: 2025
+  month: Oct
+  text: "Filed a Korean patent on **dynamic span-aware information extraction**."
+
+- year: 2025
+  month: Mar
+  text: "Started the **Integrated M.S./Ph.D.** program at Konkuk University."
+
+- year: 2024
+  month: Jul
+  text: "Joined the **Graph & Language Intelligence Lab** as an undergraduate research intern."

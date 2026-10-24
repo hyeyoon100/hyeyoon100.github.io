@@ -1,0 +1,17 @@
+# Seminar talks on the home page (rendered by _includes/seminars.html).
+#
+# - List items newest first.
+# - slides: path to the slide PDF. Put the file in files/seminar/ and write
+#   "/files/seminar/<file>.pdf". Leave empty to show the title without a link.
+
+- title: "Neuro-Symbolic Integration for LLM Reasoning - Differentiable Logical Constraints and Rule Internalization"
+  date: "26.07.29"
+  slides: "/files/seminar/seminar_2026_summer.pdf"
+
+- title: "Integrating Logical Rules into LLM Reasoning for Document-level Relation Extraction"
+  date: "26.01.08"
+  slides: "/files/seminar/seminar_2026_winter.pdfa"
+
+- title: "Trends in Joint Information Extraction"
+  date: "25.07.10"
+  slides: "/files/seminar/seminar_2025_summer.pdf"

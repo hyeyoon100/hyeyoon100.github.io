@@ -40,10 +40,14 @@ My research lies at the intersection of graph learning and large language models
 - **Graph & Language Intelligence Lab**, Konkuk University, *Jul. 2024 – Feb. 2025*
   - Undergraduate Research Intern
 
+{% comment %}
+News is hidden for now. To show it again, delete this comment block's
+opening and closing tags (and re-enable "News" in _data/navigation.yml).
+
 ## News
 
-- **[20XX.XX]** News item (e.g., Our paper was accepted to ...)
-- **[20XX.XX]** News item
+{% include news.html %}
+{% endcomment %}
 
 ## Publications
 
@@ -103,6 +107,10 @@ Dynamic Span-Aware Information Extraction Method and Apparatus<br>
 - **멀티모달 생성모델의 신뢰성 및 제어가능성 향상을 위한 그래프 구조 기반의 상호작용**, *Sep. 2024 – Aug. 2028*
   - 한국연구재단 · 중견연구(유형1) · 개인연구
   - Role: 실무책임자
+
+## Seminar
+
+{% include seminars.html %}
 
 ## Language
 

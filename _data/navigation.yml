@@ -8,8 +8,8 @@ main:
   - title: "About"
     url: /#about-me
 
-  - title: "News"
-    url: /#news
+  # - title: "News"
+  #   url: /#news
 
   - title: "Education"
     url: /#education
@@ -25,3 +25,6 @@ main:
 
   - title: "Projects"
     url: /#research-projects
+
+  - title: "Seminar"
+    url: /#seminar

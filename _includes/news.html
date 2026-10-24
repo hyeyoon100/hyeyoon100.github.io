@@ -1,0 +1,17 @@
+{% comment %} News timeline; edit entries in _data/news.yml {% endcomment %}
+{% assign news_years = site.data.news | group_by: "year" %}
+<div class="news-timeline">
+  {% for group in news_years %}
+    <div class="news-year">
+      <div class="news-year__label">{{ group.name }}</div>
+      <ul class="news-year__items">
+        {% for item in group.items %}
+          <li class="news-item">
+            <span class="news-item__month">{{ item.month }}</span>
+            <span class="news-item__text">{{ item.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>
