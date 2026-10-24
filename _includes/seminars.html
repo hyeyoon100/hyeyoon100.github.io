@@ -1,17 +1,15 @@
 {% comment %} Seminar list; edit entries in _data/seminars.yml {% endcomment %}
 {% include base_path %}
-<ul class="seminar-list">
+<div class="seminar-list">
   {% for talk in site.data.seminars %}
-    <li class="seminar-item">
-      <span class="seminar-item__title">
-        {% if talk.slides and talk.slides != "" %}
-          <a href="{% if talk.slides contains '://' %}{{ talk.slides }}{% else %}{{ base_path }}{{ talk.slides }}{% endif %}">{{ talk.title }}</a>
-          <a class="seminar-item__pdf" href="{% if talk.slides contains '://' %}{{ talk.slides }}{% else %}{{ base_path }}{{ talk.slides }}{% endif %}" aria-label="Slides (PDF)"><i class="fas fa-file-pdf" aria-hidden="true"></i></a>
-        {% else %}
-          {{ talk.title }}
-        {% endif %}
-      </span>
-      <span class="seminar-item__date">{{ talk.date }}</span>
-    </li>
+    <div class="seminar-item">
+      <div class="seminar-item__head">
+        <strong class="seminar-item__title">[{{ forloop.rindex }}] {{ talk.title }}</strong>
+        <span class="seminar-item__date">{{ talk.date }}</span>
+      </div>
+      {% if talk.slides and talk.slides != "" %}
+        <a href="{% if talk.slides contains '://' %}{{ talk.slides }}{% else %}{{ base_path }}{{ talk.slides }}{% endif %}">[Slides]</a>
+      {% endif %}
+    </div>
   {% endfor %}
-</ul>
+</div>
